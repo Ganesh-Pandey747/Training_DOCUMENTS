@@ -1,0 +1,13 @@
+[3:54 PM, 10/26/2021] Gurpreet Taazaa: dotnet new classlib --name Domain
+[3:54 PM, 10/26/2021] Gurpreet Taazaa: dotnet new classlib --name DataAccesslayer
+[3:55 PM, 10/26/2021] Gurpreet Taazaa: dotnet new classlib --name BussinessLogicLayer
+[3:55 PM, 10/26/2021] Gurpreet Taazaa: dotnet new sln --name UserMgmtsln
+[3:56 PM, 10/26/2021] Gurpreet Taazaa: dotnet new webapi --name UserMgmt.API
+[3:58 PM, 10/26/2021] Gurpreet Taazaa: dotnet sln add BussinessLogicLayer/BussinessLogicLayer.csproj
+[3:59 PM, 10/26/2021] Gurpreet Taazaa: dotnet sln add Domain/Domain.csproj
+[4:00 PM, 10/26/2021] Gurpreet Taazaa: dotnet sln add DataAccesslayer/DataAccesslayer.csproj
+[4:00 PM, 10/26/2021] Gurpreet Taazaa: dotnet sln add UserMgmt.API/UserMgmt.API.csproj
+[4:01 PM, 10/26/2021] Gurpreet Taazaa: dotnet build
+[4:07 PM, 10/26/2021] Gurpreet Taazaa: dotnet add ./DataAccesslayer/DataAccesslayer.csproj reference ./Domain/Domain.csproj
+[4:10 PM, 10/26/2021] Gurpreet Taazaa: dotnet add ./BussinessLogicLayer/BussinessLogicLayer.csproj reference ./DataAccesslayer/DataAccesslayer.csproj
+[4:11 PM, 10/26/2021] Gurpreet Taazaa: dotnet add ./UserMgmt.API/UserMgmt.API.csproj reference ./BussinessLogicLayer/BussinessLogicLayer.csproj
